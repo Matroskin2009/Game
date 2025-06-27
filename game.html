@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Головоломка</title>
+    <link rel="stylesheet" href="game.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="game-container">
+    <div class="screen visible" id="ScreenStart">
+        <h2 class="lobster-regular">Игра - собери языки програмирования</h2>
+        <button class="btn" id="start-btn">Начать игру</button>
+    </div>
+
+    <div class="screen" id="ScreenLanguages">
+        <h2>Выбери свой любимый язык</h2>
+        <ul class="programmer-list">
+            <li>
+                <button class="choose-language">
+                    <p class="programmer-list-item">Python</p>
+                    <img src="images/python.png " alt="python">
+                </button>
+            </li>
+            <li>
+                <button class="choose-language">
+                    <p class="programmer-list-item">JS</p>
+                    <img src="images/Javascript.png " alt="Javascript">
+                </button>
+            </li>
+            <li>
+                <button class="choose-language">
+                    <p class="programmer-list-item">C++</p>
+                    <img src="images/Cplusplus.png " alt="C++">
+                </button>
+            </li>
+            <li>
+                <button class="choose-language">
+                    <p class="programmer-list-item">C#</p>
+                    <img src="images/Csharp.png" alt="C#">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="screen" id="ScreenLevelMod">
+        <h2>Выбери Уровень сложности</h2>
+        <ul class="level-list">
+            <li>
+                <button class="choose-level EasyButton" id="EasyButton">
+                    <p class="level-list-item">Легкий</p>
+                    <img src="images/easyLevel.png" alt="easyLevel">
+                </button>
+            </li>
+
+            <li>
+                <button class="choose-level MiddleButton" id="MiddleButton">
+                    <p class="level-list-item">Средний</p>
+                    <img src="images/middleLevel.png" alt="MiddleLevel">
+                </button>
+            </li>
+
+            <li>
+                <button class="choose-level HardButton" id="HardButton">
+                    <p class="level-list-item">Тяжелый</p>
+                    <img src="images/hardLevel.png" alt="Hard">
+                </button>
+            </li>
+
+            <li>
+                <button class="choose-level ExtremeButton" id='ExtremeButton'>
+                    <p class="level-list-item">Экстрим</p>
+                    <img src="images/ExtremeLevel.png" alt="Hard">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="screen game-container" id="ScreenGame">
+        <h3 id="time" class="time">Наиграно уже: 0 секунд</h3>
+        <h3 id="count" class="count">Счет: 0</h3>
+        <h3 id="lives" class="lives">Жизни: 3</h3>
+    </div>
+</div>
+
+
+<audio src="audio/EasyMod.mp3" id="SoundEasyLevel"></audio>
+<audio src="audio/Middle.mp3" id="SoundMiddleLevel"></audio>
+<audio src="audio/hardLevel.mp3" id="SoundHardLevel"></audio>
+<audio src="audio/Extreme.mp3" id=SoundExtremeLevel"></audio>
+<audio src="audio/Lose.mp3" id="SoundLose"></audio>
+<audio src="audio/Win.mp3" id="SoundWin"></audio>
+<audio src="audio/SoundOfBomb.mp3" id="SoundOfBomb"></audio>
+<audio src="audio/hardLevel.mp3" id='hardBite'></audio>
+<audio src="audio/Click.mp3" id="bite"></audio>
+<script src="game.js"></script>
+</body>
+</html>

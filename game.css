@@ -1,0 +1,191 @@
+.lobster-regular {
+    font-family: "Lobster", sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+
+li{
+    list-style-type: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --primary-color: #d4a373;
+    --secondary-color: #fefae0;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media (max-width: 999px) {
+    .programmer-list, .level-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .programmer-list img, level-list img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+}
+
+@media (max-width: 599px) {
+    .programmer-list, .level-list{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .programmer-list img, level-list img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+}
+
+
+@media (min-width: 600px) {
+    .programmer-list, .level-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .programmer-list img{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .level-list img{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        width: 200%;
+        height: 200px;
+        object-fit: contain;
+    }
+
+}
+
+.choose-language, .choose-level{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    font-family: contain;
+}
+
+
+
+.EasyButton:hover {
+    background-color: #4ef64e;
+}
+
+.MiddleButton:hover {
+    background-color: #fcb144;
+}
+
+.HardButton:hover {
+    background-color: #ff3737;
+}
+
+.ExtremeButton:hover {
+    background-color: #e641ff;
+}
+
+.programmer-list-item{
+    font-size: 32px;
+}
+
+.level-list-item {
+    font-size: 32px;
+    color: black;
+}
+
+.programmer-list, level-list {
+    padding: 0;
+    margin: 0;
+}
+
+.programmer-list img, .level-list img {
+    width: 20vh;
+    height: 100px;
+    object-fit: contain;
+}
+
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.btn{
+    border: 0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 15px 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.game-container {
+    position: relative;
+}
+
+.time {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    color: #030303;
+}
+
+.count {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    color: #000000;
+}
+
+.lives{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    color: #000000;
+}
+
+.visible {
+    display: flex;
+}
+
+.level-text {
+    font-size: 40px;
+    color: black;
+    font-style: italic;
+}
